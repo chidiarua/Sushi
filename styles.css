@@ -1,0 +1,413 @@
+:root{
+    --primary: #10172aff;
+    --hover: rgb(31, 31, 33);
+    --button: #3b81f6ff;
+    --crosschain: #1a2c52ff;
+    --hover2: #403352ff;
+    --hover3: #d0d7e3;
+    --hover4: #273143ff;
+    --currenybox: #1e293bff;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+.mb{
+    width: 390px;
+    max-width: 390px;
+    height: 100vh;
+    border: 1px solid black;
+    margin: auto;
+    background: var(--primary);
+}
+
+.mb .navbar {
+    position: fixed;
+    height: 50px;
+    padding: 0 1rem;
+    width: 390px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(48, 46, 46);
+    
+}
+
+.mb .navbar .logoex img{
+    width: 1.5rem;
+    height: 1.5rem;
+    
+}
+
+.mb .navbar .logoex {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.mb .navbar .logoex .explore{
+    display: flex;
+    color: white;
+    align-items: center;
+    font-size: 0.8rem;
+    
+}
+
+.mb .navbar .logoex .explore:hover{
+    padding: 0.2rem 0.3rem;
+    background: var(--hover);
+    border-radius: 5px;
+    
+}
+
+.mb .navbar .connect{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.mb .navbar .connect a{
+    padding: 0.5rem 0.8rem;
+    background: var(--hover);
+    border-radius: 15px;
+    opacity: 0.5;
+}
+
+.mb .navbar .connect img{
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.mb .navbar .connect .ethlogo {
+    width: 2.5rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--hover);
+    border-radius: 10px;
+    opacity: 0.5;
+
+}
+
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/*middle-trade*/
+
+.mb .trade {
+    position: relative;
+    width: 95%;
+    margin: auto;
+    height: 120px;
+    top: 80px;
+    
+}
+
+.mb .trade h2{
+    margin-bottom: 5px;
+    color: white;
+}
+
+.mb .trade p {
+    color: var(--button);
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.mb .trade p span{
+    margin-left: 5px;
+}
+
+.mb .trade .swap_set {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    align-items: center;
+    
+}
+
+.mb .trade .swap_set p{
+    font-size: 0.8rem;
+    padding: 0.5rem 0.6rem;
+    background: var(--hover);
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 5px;
+    opacity: 0.5;
+}
+
+.mb .trade .swap_set i{
+    font-size: 1.1rem;
+    padding: 0.6rem 0.6rem;
+    border-radius: 50%;
+    background: var(--hover);
+    color: white;
+    opacity: 0.5;
+}
+
+/*cross chain section*/
+
+
+.mb .cross_chain {
+    position: relative;
+    width: 95%;
+    margin: auto;
+    height: 170px;
+    padding: 10px 20px;
+    top: 90px;
+    border-radius: 15px;
+    background: linear-gradient(to top right, var(--crosschain)2%, rgb(82, 55, 82));
+    border: 1px solid rgb(77, 75, 75);
+}
+
+.mb .cross_chain .fa-xmark{
+    position: relative;
+    float: right;
+    padding: 0.3rem 0.4rem;
+    background: var(--hover2);
+    border-radius: 50%;
+    color: white;
+}
+
+.mb .cross_chain h4{
+    color: var(--button);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.mb .cross_chain h4 span{
+    margin-left: 10px;
+    background: linear-gradient(to right, var(--button), #8d65ffff);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;   
+}
+
+.cross_chain .fa-duotone{
+    font-size: 2.2rem;
+    color: var(--hover3);
+    opacity: 0.9;
+    margin-top: 20px;
+}
+
+
+.mb .cross_chain p{
+    color: grey;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    line-height: 20px;
+}
+
+.mb .cross_chain p a{
+    color: var(--button)
+}
+
+
+/*input currency*/
+
+.input_currency {
+    position: relative;
+    width: 95%;
+    margin: auto;
+    height: 95px;
+    padding: 15px 10px;
+    top: 110px;
+    border-radius: 15px;
+    background: var(--currenybox);
+
+}
+
+
+.input_currency .swap_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input_currency .swap_container .no_spin{
+    width: 15rem;
+    height: 2.5rem;
+    appearance: textfield;
+    border-style: none;
+    font-size: 2.1rem;
+    color: grey;
+    background: inherit;
+
+}
+
+.input_currency .swap_container .no_spin:focus{
+    outline: none;
+}
+
+.no_spin::-webkit-outer-spin-button, .no_spin::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input_currency .swap_container .coin{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px;
+    background: var(--hover4);
+    border-radius: 15px;
+}
+
+.input_currency .swap_container .coin img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.input_currency .swap_container .coin h3{
+    color: white;
+    font-weight: lighter;
+}
+
+.mb .input_currency .dolla_balance{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-size: 1.1rem;
+    color: grey;
+}
+
+.mb .input_currency .dolla_balance .wllet{
+    display: flex;
+    gap: 5px;
+}
+
+
+.mb .interchange {
+    position: relative;
+    top: 125px;
+    width: 35px;
+    height: 35px;
+    margin: auto;
+    border: 1px solid rgb(63, 61, 61);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mb .interchange i{
+    color: var(--button);
+}
+
+/*output currency*/
+
+
+.output_currency {
+    position: relative;
+    width: 95%;
+    margin: auto;
+    height: 95px;
+    padding: 15px 10px;
+    top: 138px;
+    border-radius: 15px;
+    background: var(--currenybox);
+
+}
+
+
+.output_currency .swap_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.output_currency .swap_container .no_spin{
+    width: 12rem;
+    height: 2.5rem;
+    appearance: textfield;
+    border-style: none;
+    font-size: 2.1rem;
+    color: grey;
+    background: inherit;
+
+}
+
+.output_currency .swap_container .no_spin:focus{
+    outline: none;
+}
+
+
+.output_currency .swap_container .coin{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px;
+    background: var(--hover4);
+    border-radius: 15px;
+}
+
+.output_currency .swap_container .coin img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.output_currency .swap_container .coin h3{
+    color: white;
+    font-weight: lighter;
+}
+
+.mb .output_currency .dolla_balance{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-size: 1.1rem;
+    color: grey;
+}
+
+.mb .output_currency .dolla_balance .wllet{
+    display: flex;
+    gap: 5px;
+}
+
+
+/*swap button*/
+
+
+.mb .btn {
+    position: relative;
+    top: 150px;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    background: var(--button);
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+
+}
