@@ -411,3 +411,9 @@ a{
     border: none;
 
 }
+
+.mb .btn button{
+    background: var(--button);
+    border: none;
+    color: white;
+}
