@@ -486,6 +486,7 @@ a{
     background: var(--currenybox);
     border-radius: 15px;
     padding: 15px;
+    overflow-y: auto;
     display: none;
 
 }
