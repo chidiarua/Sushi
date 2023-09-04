@@ -39,9 +39,50 @@
                 <div class="navbar">
                     <div class="logoex">
                         <img src="./image/sushi.png">
-                        <div class="explore">
+                        <div class="explore" onclick="showExploreMenu()">
                             <p>Explore</p>
                             <img src="image/arrow.png">
+                            <div class="explore_menu_items">
+                                <li class="item">
+                                    <h4>Swap</h4>
+                                    <p>The easiest way to trade</p>
+                                </li>
+                                <li class="item">
+                                    <h4>Pools</h4>
+                                    <p>Earn fee by providing liquidity</p>
+                                </li>
+                                <li class="item">
+                                    <h4>Pay</h4>
+                                    <p>Automate salaries and vesting schedules.</p>
+                                </li>
+                                <li class="item">
+                                    <h4>Analytics</h4>
+                                    <p>Find the best opportunities.</p>
+                                </li>
+                                <li class="item">
+                                    <h4>Blog</h4>
+                                    <p>Stay up to date with the latest
+                                        product...</p>
+                                </li>
+                                <li class="item">
+                                    <h4>Academy</h4>
+                                    <p>Everything you need to get up to speed
+                                        with DeFi.</p>
+                                </li>
+                                <li class="item">
+                                    <h4>Partner with Sushi</h4>
+                                    <p>Incentivize your token with Sushi
+                                        rewards.</p>
+                                </li>
+                                <li class="item">
+                                    <h4>List enquiry</h4>
+                                    <p>Get your token on our default token list.</p>
+                                </li>
+                                <li class="item">
+                                    <h4>Buy Crypto</h4>
+                                    <p>Need to buy some more crypto?</p>
+                                </li>
+                            </div>
                         </div>
                     </div>
                     <div class="connect">
@@ -115,8 +156,39 @@
                 <button>Connect Wallet</button>
             </div>
 
+            <!--when wallet is connected input made in swap field-->
+            <div class="swap_details">
+                <div class="detail">
+                    <p>Price impact</p>
+                    <p>-0.38%</p>
+                </div>
+                <div class="detail">
+                    <p>Est. Received</p>
+                    <p>27.9413 SUSHI</p>
+                </div>
+                <div class="detail">
+                    <p>Min. Received</p>
+                    <p>27.9413 SUSHI</p>
+                </div>
+                <div class="detail">
+                    <p>Network fee</p>
+                    <p>0.001398ETH</p>
+                </div>
+                <div class="detail">
+                    <p>Route</p>
+                    <p><a>View</a></p>
+                </div>
+                <div class="line"></div>
+                <div class="detail">
+                    <p>Recipient</p>
+                    <p>0x11bd..5578</p>
+                </div>
+            </div>
+            <div class="empty">
+            </div>
+
         </div>
 
-        <script></script>
+        <script src="./index.js"></script>
     </body>
 </html>
