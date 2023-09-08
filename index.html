@@ -34,64 +34,326 @@
         <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
-        <div class="mb">
-            <header>
-                <div class="navbar">
-                    <div class="logoex">
-                        <img src="./image/sushi.png">
-                        <div class="explore" onclick="showExploreMenu()">
-                            <p>Explore</p>
-                            <img src="image/arrow.png">
-                            <div class="explore_menu_items">
-                                <li class="item">
-                                    <h4>Swap</h4>
-                                    <p>The easiest way to trade</p>
-                                </li>
-                                <li class="item">
-                                    <h4>Pools</h4>
-                                    <p>Earn fee by providing liquidity</p>
-                                </li>
-                                <li class="item">
-                                    <h4>Pay</h4>
-                                    <p>Automate salaries and vesting schedules.</p>
-                                </li>
-                                <li class="item">
-                                    <h4>Analytics</h4>
-                                    <p>Find the best opportunities.</p>
-                                </li>
-                                <li class="item">
-                                    <h4>Blog</h4>
-                                    <p>Stay up to date with the latest
-                                        product...</p>
-                                </li>
-                                <li class="item">
-                                    <h4>Academy</h4>
-                                    <p>Everything you need to get up to speed
-                                        with DeFi.</p>
-                                </li>
-                                <li class="item">
-                                    <h4>Partner with Sushi</h4>
-                                    <p>Incentivize your token with Sushi
-                                        rewards.</p>
-                                </li>
-                                <li class="item">
-                                    <h4>List enquiry</h4>
-                                    <p>Get your token on our default token list.</p>
-                                </li>
-                                <li class="item">
-                                    <h4>Buy Crypto</h4>
-                                    <p>Need to buy some more crypto?</p>
-                                </li>
-                            </div>
-                        </div>
+        <div class="desktop_nav">
+            <div class="logo_items">
+                <img src="./image/sushi.svg">
+                <li class="d_item">Swap</li>
+                <li class="d_item">Pools</li>
+                <li class="d_item">Pay</li>
+                <li class="d_item">More</li>
+                <li class="d_item">Partners</li>
+                <li class="d_item">Buy Crypto</li>
+            </div>
+            <div class="dconnect">
+                <div class="dethlogo">
+                    <div id="dd" onclick="showDesktopChainMenu()">
+                        <img src="./image/eth.svg" alt="eth-logo">
+                        <p>Ethereum</p>
                     </div>
-                    <div class="connect">
-                        <div class="ethlogo"><img src="./image/ethlogo.png"
-                                alt="eth-logo"></div>
-                        <a href="#">Connect</a>
+                    <div class="dchain_menu">
+                        <li class="dchain_search">
+                            <i class="fa-thin fa-magnifying-glass"></i>
+                            <input id="dsearch" type="search"
+                                placeholder="search network">
+                        </li>
+                        <li class="dchain">
+                            <div class="dccc">
+                                <img src="./image/eth.svg" alt="eth">
+                                <p>Ethereum</p>
+                            </div>
+                        </li>
+                        <li class="dchain">
+                            <div class="dccc">
+                                <img src="./image/arbitrum.svg"
+                                    alt="arb">
+                                <p>Arbitrum One</p>
+                            </div>
+                        </li>
+                        <li class="dchain">
+                            <div class="dccc">
+                                <img src="./image/polygon.svg"
+                                    alt="polygon">
+                                <p>Polygon Matic</p>
+                            </div>
+                        </li>
+                        <li class="dchain"><div class="dccc">
+                                <img src="./image/optimism.svg"
+                                    alt="optimism">
+                                <p>Optimism</p>
+                            </div>
+                        </li>
+                        <li class="dchain"><div class="dccc">
+                                <img src="./image/bnb.svg" alt="bsc">
+                                <p>BNB Smart Chain</p>
+                            </div>
+                        </li>
+                        <li class="dchain"><div class="dccc">
+                                <img src="./image/gnosis.svg"
+                                    alt="gnosis">
+                                <p>Gnosis</p>
+                            </div>
+                        </li>
+                        <li class="dchain"><div class="dccc">
+                                <img src="./image/avax.svg" alt="avax">
+                                <p>Avalanche C-Chain</p>
+                            </div>
+                        </li>
+                        <li class="dchain"><div class="dccc">
+                                <img src="./image/fantom.svg"
+                                    alt="fantom">
+                                <p>Fantom</p>
+                            </div>
+                        </li>
+                        <li class="dchain"><div class="dccc">
+                                <img src="./image/hamony.svg" alt="one">
+                                <p>Harmony</p>
+                            </div>
+                        </li>
+                        <li class="dchain"><div class="dccc">
+                                <img src="./image/bittorent.svg"
+                                    alt="bittorent">
+                                <p>BitTorrent Chain</p>
+                            </div>
+                        </li>
+                        <li class="dchain"><div class="dccc">
+                                <img src="./image/kava.svg" alt="kava">
+                                <p>Kava EVM</p>
+                            </div>
+                        </li>
+                        <li class="dchain"><div class="dccc">
+                                <img src="./image/metis.svg" alt="metis">
+                                <p>Metis Andromeda</p>
+                            </div>
+                        </li>
+                        <li class="dchain"><div class="dccc">
+                                <img src="./image/celo.svg" alt="celo">
+                                <p>Celo</p>
+                            </div>
+                        </li>
+                        <li class="dchain"><div class="dccc">
+                                <img src="./image/huobi.svg" alt="huobi">
+                                <p>Houbi Eco Chain</p>
+                            </div>
+                        </li>
+                        <li class="dchain"><div class="dccc">
+                                <img src="./image/moonbeam.svg"
+                                    alt="moonbeam">
+                                <p>Moonbeam</p>
+                            </div>
+                        </li>
+
                     </div>
                 </div>
-            </header>
+                <a href="#" id="deskconnect"
+                    onclick="showDesktopWallets()">Connect
+                    Wallet</a>
+                <div class="dwallet_connect">
+                    <li class="dprovider">
+                        <div class="dppp">
+                            <img src="./image/metamask.svg">
+                            <p>Metamask</p>
+                        </div>
+                    </li>
+                    <li class="dprovider">
+                        <div class="dppp">
+                            <img src="./image/ledger.svg">
+                            <p>Ledger</p>
+                        </div>
+                    </li>
+                    <li class="dprovider">
+                        <div class="dppp">
+                            <img src="./image/walletconnect.svg">
+                            <p>WalletConnect</p>
+                        </div>
+                    </li>
+                    <li class="dprovider">
+                        <div class="dppp">
+                            <img src="./image/coinbase.svg">
+                            <p>Coinbase Wallet</p>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <div class="mb">
+            <div class="navbar">
+                <div class="logoex">
+                    <img src="./image/sushi.svg">
+                    <div class="explore">
+                        <p onclick="showExploreMenu()">Explore</p>
+                        <img src="image/arrow.png" onclick="showExploreMenu()">
+                        <div class="explore_menu_items">
+                            <li class="item">
+                                <h4>Swap</h4>
+                                <p>The easiest way to trade</p>
+                            </li>
+                            <li class="item">
+                                <h4>Pools</h4>
+                                <p>Earn fee by providing liquidity</p>
+                            </li>
+                            <li class="item">
+                                <h4>Pay</h4>
+                                <p>Automate salaries and vesting schedules.</p>
+                            </li>
+                            <li class="item">
+                                <h4>Analytics</h4>
+                                <p>Find the best opportunities.</p>
+                            </li>
+                            <li class="item">
+                                <h4>Blog</h4>
+                                <p>Stay up to date with the latest
+                                    product...</p>
+                            </li>
+                            <li class="item">
+                                <h4>Academy</h4>
+                                <p>Everything you need to get up to speed
+                                    with DeFi.</p>
+                            </li>
+                            <li class="item">
+                                <h4>Partner with Sushi</h4>
+                                <p>Incentivize your token with Sushi
+                                    rewards.</p>
+                            </li>
+                            <li class="item">
+                                <h4>List enquiry</h4>
+                                <p>Get your token on our default token list.</p>
+                            </li>
+                            <li class="item">
+                                <h4>Buy Crypto</h4>
+                                <p>Need to buy some more crypto?</p>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="connect">
+                    <div class="ethlogo">
+                        <img src="./image/eth.svg" alt="eth-logo"
+                            onclick="showChainsMenu()">
+                        <div class="chain_menu_items">
+                            <li class="chain_search">
+                                <div>
+                                    <i class="fa-thin fa-magnifying-glass"></i>
+                                    <input id="search"
+                                        type="search"
+                                        placeholder="search network">
+                                </div>
+                            </li>
+                            <li class="chain">
+                                <div class="ccc">
+                                    <img src="./image/eth.svg" alt="eth">
+                                    <p>Ethereum</p>
+                                </div>
+                            </li>
+                            <li class="chain"><div class="ccc">
+                                    <img src="./image/arbitrum.svg"
+                                        alt="arb">
+                                    <p>Arbitrum One</p>
+                                </div>
+                            </li>
+                            <li class="chain"><div class="ccc">
+                                    <img src="./image/polygon.svg"
+                                        alt="polygon">
+                                    <p>Polygon Matic</p>
+                                </div>
+                            </li>
+                            <li class="chain"><div class="ccc">
+                                    <img src="./image/optimism.svg"
+                                        alt="optimism">
+                                    <p>Optimism</p>
+                                </div>
+                            </li>
+                            <li class="chain"><div class="ccc">
+                                    <img src="./image/bnb.svg" alt="bsc">
+                                    <p>BNB Smart Chain</p>
+                                </div>
+                            </li>
+                            <li class="chain"><div class="ccc">
+                                    <img src="./image/gnosis.svg"
+                                        alt="gnosis">
+                                    <p>Gnosis</p>
+                                </div>
+                            </li>
+                            <li class="chain"><div class="ccc">
+                                    <img src="./image/avax.svg" alt="avax">
+                                    <p>Avalanche C-Chain</p>
+                                </div>
+                            </li>
+                            <li class="chain"><div class="ccc">
+                                    <img src="./image/fantom.svg"
+                                        alt="fantom">
+                                    <p>Fantom</p>
+                                </div>
+                            </li>
+                            <li class="chain"><div class="ccc">
+                                    <img src="./image/hamony.svg" alt="one">
+                                    <p>Harmony</p>
+                                </div>
+                            </li>
+                            <li class="chain"><div class="ccc">
+                                    <img src="./image/bittorent.svg"
+                                        alt="bittorent">
+                                    <p>BitTorrent Chain</p>
+                                </div>
+                            </li>
+                            <li class="chain"><div class="ccc">
+                                    <img src="./image/kava.svg" alt="kava">
+                                    <p>Kava EVM</p>
+                                </div>
+                            </li>
+                            <li class="chain"><div class="ccc">
+                                    <img src="./image/metis.svg" alt="metis">
+                                    <p>Metis Andromeda</p>
+                                </div>
+                            </li>
+                            <li class="chain"><div class="ccc">
+                                    <img src="./image/celo.svg" alt="celo">
+                                    <p>Celo</p>
+                                </div>
+                            </li>
+                            <li class="chain"><div class="ccc">
+                                    <img src="./image/huobi.svg" alt="huobi">
+                                    <p>Houbi Eco Chain</p>
+                                </div>
+                            </li>
+                            <li class="chain"><div class="ccc">
+                                    <img src="./image/moonbeam.svg"
+                                        alt="moonbeam">
+                                    <p>Moonbeam</p>
+                                </div>
+                            </li>
+
+                        </div>
+                    </div>
+                    <a href="#" id="connect_wallet"
+                        onclick="showWalletsMenu()">Connect</a>
+                    <div class="wallet_connect">
+                        <li class="provider">
+                            <div class="ppp">
+                                <img src="./image/metamask.svg">
+                                <p>Metamask</p>
+                            </div>
+                        </li>
+                        <li class="provider">
+                            <div class="ppp">
+                                <img src="./image/ledger.svg">
+                                <p>Ledger</p>
+                            </div>
+                        </li>
+                        <li class="provider">
+                            <div class="ppp">
+                                <img src="./image/walletconnect.svg">
+                                <p>WalletConnect</p>
+                            </div>
+                        </li>
+                        <li class="provider">
+                            <div class="ppp">
+                                <img src="./image/coinbase.svg">
+                                <p>Coinbase Wallet</p>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
 
             <div class="trade">
                 <h2>Trade</h2>
@@ -115,7 +377,7 @@
                     <input type="number" class="no_spin" placeholder="0.0"
                         min="0" maxlength>
                     <div class="coin">
-                        <img src="./image/ethlogo.png" alt="eth-logo">
+                        <img src="./image/eth.svg" alt="eth-logo">
                         <h3>ETH</h3>
                         <img src="image/arrow.png">
                     </div>
@@ -138,7 +400,7 @@
                     <input type="number" class="no_spin" placeholder="0.0"
                         min="0" maxlength>
                     <div class="coin">
-                        <img src="./image/sushi.png" alt="sushi-logo">
+                        <img src="./image/sushi.svg" alt="sushi-logo">
                         <h3>SUSHI</h3>
                         <img src="image/arrow.png">
                     </div>

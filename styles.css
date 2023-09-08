@@ -21,39 +21,38 @@ body{
     font-family: sans-serif;
     padding: 0;
     margin: 0;
-    font-size: 16px;
+    max-height: 100vh;
+    background: var(--primary);
     
 }
 
 
 .mb{
-    width: 390px;
-    max-width: 390px;
+    max-width: 450px;
     height: 100vh;
     max-height: 100vh;
-    border: 1px solid black;
     margin: auto;
     background: var(--primary);
-    overflow: scroll;
+    
 }
 
 .mb .navbar {
     position: fixed;
     top: 0;
     height: 50px;
+    width: 100vw;
     padding: 0 1rem;
-    width: 390px;
+    max-width: 450px;
     background: var(--primary);
     display: flex;
     justify-content: space-between;
-    align-items: center;
     align-items: center;
     border-bottom: 1px solid rgb(48, 46, 46);
     z-index: 1;
     
 }
 
-.mb .navbar .logoex img{
+.mb .navbar .logoex img, .desktop_nav .logo_items img{
     width: 1.5rem;
     height: 1.5rem;
     
@@ -70,17 +69,18 @@ body{
     color: white;
     align-items: center;
     font-size: 0.8rem;
+    padding: 0.2rem 0.3rem;
     
 }
 
 .mb .navbar .logoex .explore:hover{
-    padding: 0.2rem 0.3rem;
+    
     background: var(--currenybox);
     border-radius: 5px;
     
 }
 
-.mb .navbar .connect{
+.mb .navbar .connect, .desktop_nav .dconnect{
     display: flex;
     align-items: center;
     gap: 10px;
@@ -92,11 +92,11 @@ body{
 .mb .navbar .connect a{
     padding: 0.5rem 0.8rem;
     background: var(--currenybox);
-    border-radius: 15px;
-    opacity: 0.5;
+    border-radius: 10px;
+    opacity: 0.9;
 }
 
-.mb .navbar .connect img{
+.mb .navbar .connect img, .desktop_nav .dconnect img{
     width: 1.2rem;
     height: 1.2rem;
     cursor: pointer;
@@ -112,7 +112,7 @@ body{
     align-items: center;
     background: var(--currenybox);
     border-radius: 10px;
-    opacity: 0.5;
+    opacity: 0.9;
 
 }
 
@@ -358,7 +358,7 @@ a{
 .output_currency .swap_container .no_spin{
     width: 12rem;
     height: 2.5rem;
-    appearance: textfield;
+    appearance: text;
     border-style: none;
     font-size: 2.1rem;
     color: grey;
@@ -467,37 +467,46 @@ a{
     color: var(--button);
 }
 
-.mb .empty{
+/*.mb .empty{
     position: relative;
     height: 10px;
     top: 190px;
 }
 
-/* menus items */
+/* explor menus items */
 
 
 .mb .navbar .logoex .explore .explore_menu_items{
     position: absolute;
-    width: 45vw;
-    height: 92vh;
+    width: 50%;
+    height: 95vh;
     opacity: 0.9;
     top: 50px;
     list-style: none;
     background: var(--currenybox);
     border-radius: 15px;
     padding: 15px;
-    overflow-y: auto;
+    overflow-y: scroll;
     display: none;
 
 }
+/*removing scroll bars chrome, safari and opera*/
+.explore_menu_items::-webkit-scrollbar{
+    display: none;
+}
+/*for IE, Edge and Firefox*/
+.explore_menu_items{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 
 .mb .navbar .logoex .explore .open{
     display: block;
 }
 
 .mb .navbar .logoex .explore .explore_menu_items .item{
-    margin-bottom: 15px;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
 }
 
@@ -515,3 +524,297 @@ a{
     opacity: 0.6;
 }
 
+/*chain menu items*/
+
+.mb .navbar .connect .ethlogo .chain_menu_items{
+    position: absolute;
+    max-width: 60%;
+    right: 10px;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    top: 50px;
+    background: var(--currenybox);
+    border-radius: 15px;
+    display: none;
+}
+
+.mb .navbar .connect .ethlogo .show_chains{
+    display: block;
+}
+
+.mb .navbar .ethlogo .chain_menu_items .chain_search, .mb .navbar .ethlogo .chain_menu_items .ccc{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    
+}
+
+
+
+
+.mb .navbar .ethlogo .chain_menu_items .chain_search{
+    border-bottom: 1px solid rgb(63, 61, 61);
+    padding: 10px;
+    margin: 10px;
+}
+
+
+
+.mb .navbar .ethlogo .chain_menu_items .chain_search #search{
+    border-style: none;
+    background: inherit;
+    appearance: text;
+    color: whitesmoke;
+    font-size: 1.05rem;
+}
+.mb .navbar .ethlogo .chain_menu_items .chain_search #search:focus{
+    outline: none;
+}
+
+.mb .navbar .ethlogo .chain_menu_items .chain p{
+    font-size: 0.95rem;
+}
+
+.mb .navbar .ethlogo .chain_menu_items .chain{
+    padding: 10px;
+}
+
+.mb .navbar .ethlogo .chain_menu_items .chain:hover{
+    background: var(--hover4);
+    border-radius: 10px;
+    width: 95%;
+}
+
+
+.mb .navbar .ethlogo .chain_menu_items .chain img{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+
+/*wallet connect*/
+
+.mb .navbar .connect .wallet_connect{
+    position: absolute;
+    top: 50px;
+    width: 45%;
+    right: 10px;
+    min-height: 0;
+    list-style: none;
+    background: var(--currenybox);
+    opacity: 0.9;
+    border-radius: 15px;
+    display: none;
+
+}
+
+.mb .navbar .connect .show_wallet_connect{
+    display: block;
+}
+
+
+
+.mb .navbar .connect .wallet_connect .provider{
+    padding: 10px;
+    margin: 5px;
+}
+
+.mb .navbar .connect .wallet_connect .provider:hover{
+    background: var(--hover4);
+    border-radius: 10px;
+}
+
+.mb .navbar .connect .wallet_connect .provider .ppp{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+}
+
+/*desktop nav*/
+
+
+.desktop_nav{
+    position: fixed;
+    top: 0;
+    height: 55px;
+    width: 100%;
+    padding: 0 1rem;
+    max-width: 100vw;
+    background: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(48, 46, 46);
+    z-index: 1;
+}
+
+.desktop_nav .dconnect a{
+    padding: 0.6rem 0.8rem;
+    background: var(--currenybox);
+    border-radius: 10px;
+    opacity: 0.9;
+    font-size: 1.05rem;
+}
+
+.desktop_nav .dconnect .dethlogo {
+    width: 8rem;
+    height: 2.4rem;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    background: var(--currenybox);
+    border-radius: 10px;
+    opacity: 0.9;
+    font-size: 1.05rem;
+
+}
+
+.desktop_nav .dconnect .dethlogo #dd{
+    display: flex;
+    gap: 5px;
+}
+
+.desktop_nav .logo_items {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.desktop_nav .logo_items img{
+    margin-right: 25px;
+}
+
+.desktop_nav .logo_items .d_item{
+    padding: 10px;
+}
+
+.desktop_nav .logo_items .d_item:hover{
+    background: var(--hover4);
+    border-radius: 10px;
+}
+
+
+/*chains*/
+.desktop_nav .dconnect .dethlogo .dchain_menu{
+    position: absolute;
+    max-width: 60%;
+    right: 5%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    top: 50px;
+    background: var(--currenybox);
+    border-radius: 15px;
+    display: none;
+}
+
+.desktop_nav .dconnect .dethlogo .show_dchain_menu{
+    display: block;
+}
+
+
+.desktop_nav .dconnect .dethlogo .dchain_menu .dchain_search, .desktop_nav .dconnect .dethlogo .dchain_menu .dchain .dccc{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.desktop_nav .dconnect .dethlogo .dchain_menu .dchain_search{
+    border-bottom: 1px solid rgb(63, 61, 61);
+    padding: 10px;
+    margin: 10px;
+}
+
+.desktop_nav .dconnect .dethlogo .dchain_menu .dchain_search #dsearch{
+    border-style: none;
+    background: inherit;
+    appearance: text;
+    color: whitesmoke;
+    font-size: 1.05rem;
+}
+
+.desktop_nav .dconnect .dethlogo .dchain_menu .dchain_search #dsearch:focus{
+    outline: none;
+}
+
+
+.desktop_nav .dconnect .dethlogo .dchain_menu .dchain{
+    padding: 10px;
+    font-size: 1.01rem;
+}
+
+.desktop_nav .dconnect .dethlogo .dchain_menu .dchain:hover{
+    background: var(--hover4);
+    border-radius: 10px;
+    width: 95%;
+}
+
+/*wallet connect providers*/
+
+.desktop_nav .dconnect .dwallet_connect{
+    position: absolute;
+    top: 50px;
+    width: 15rem;
+    right: 10px;
+    min-height: 0;
+    list-style: none;
+    background: var(--currenybox);
+    opacity: 0.9;
+    border-radius: 15px;
+    display: none;
+}
+
+
+.desktop_nav .dconnect .show_dwallet_connect{
+    display: block;
+}
+
+.desktop_nav .dconnect .dwallet_connect .dprovider{
+    padding: 10px;
+    margin: 5px;
+}
+
+.desktop_nav .dconnect .dwallet_connect .dprovider:hover{
+    background: var(--hover4);
+    border-radius: 10px;
+    
+}
+
+.desktop_nav .dconnect .dwallet_connect .dprovider .dppp{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+}
+
+
+@media (min-width: 759px) {
+    .mb .navbar {
+        display: none;
+    }
+
+    .mb .trade h2{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 760px){
+    .desktop_nav{
+        display: none; 
+    }
+
+    
+}
